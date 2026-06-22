@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <link rel="stylesheet" href="/projeto-biblioteca/css/Aluno.css">
+</head>
+
+<body>
+    <div id="menu-container"></div>
+
+    <main class="container">
+
+        <h1>Cadastro de Alunos</h1>
+
+        <input
+            type="text"
+            id="nomeAluno"
+            placeholder="Nome do aluno">
+
+        <input
+            type="text"
+            id="cpfAluno"
+            placeholder="CPF">
+
+        <input
+            type="text"
+            id="turmaAluno"
+            placeholder="Turma">
+
+        <input
+            type="number"
+            id="idadeAluno"
+            placeholder="Idade">
+
+        <button id="btnCadastrar" onclick="cadastrarAluno()">
+            Cadastrar
+        </button>
+
+        <hr>
+
+        <h2>Alunos Cadastrados</h2>
+
+        <div class="filtros">
+
+            <input
+                type="text"
+                id="buscaAluno"  
+                placeholder="Buscar por nome ou CPF...">
+
+            <select id="filtroTurma">
+                <option value="">Todas as turmas</option>
+            </select>
+
+        </div>
+
+        <ul id="listaAlunos"></ul>
+
+    </main>
+
+    <script src="/projeto-biblioteca/js/menu.js"></script>
+    <script src="/projeto-biblioteca/js/Alunos.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PÁGINA DE LIVROS</title>
+    <link rel="stylesheet" href="/projeto-biblioteca/css/Livro.css">
+</head>
+
+<body>
+    <div id="menu-container"></div>
+
+    <main class="container">
+
+        <h1>Cadastro de Livros</h1>
+
+        <input
+            type="text"
+            id="titulo"
+            placeholder="Título do livro">
+
+        <input
+            type="text"
+            id="autor"
+            placeholder="Autor">
+
+        <input
+            type="text"
+            id="categoria"
+            placeholder="Categoria">
+
+        <input
+            type="number"
+            id="ano"
+            placeholder="Ano de publicação">
+
+        <button id="btnCadastrar" onclick="cadastrarLivro()">
+            Cadastrar Livro
+        </button>
+
+        <hr>
+
+        <h2>Livros Cadastrados</h2>
+
+        <div class="filtros">
+
+            <input
+                type="text"
+                id="buscaTitulo"
+                placeholder="Buscar por título...">
+
+            <select id="filtroCategoria">
+                <option value="">Todas as categorias</option>
+            </select>
+
+            <select id="filtroStatus">
+                <option value="">Todos os status</option>
+                <option value="disponivel">Disponível</option>
+                <option value="emprestado">Emprestado</option>
+            </select>
+
+        </div>
+
+        <ul id="listaLivros"></ul>
+
+    </main>
+
+    <script src="/projeto-biblioteca/js/menu.js"></script>
+    <script src="/projeto-biblioteca/js/Livros.js"></script>
+
+
+</body>
+</html>

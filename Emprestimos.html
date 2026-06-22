@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Empréstimos</title>
+    <link rel="stylesheet" href="/projeto-biblioteca/css/Emprestimo.css">
+</head>
+
+<body>
+
+    <div id="menu-container"></div>
+
+    <main class="container">
+
+        <h1>Controle de Empréstimos</h1>
+
+        <label for="alunoSelect">Aluno</label>
+        <select id="alunoSelect">
+            <option value="">Selecione um aluno</option>
+        </select>
+
+        <label for="livroSelect">Livro</label>
+        <select id="livroSelect">
+            <option value="">Selecione um livro</option>
+        </select>
+
+        <label for="dataInicio">Data de Início</label>
+        <input type="date" id="dataInicio">
+
+        <label for="dataFim">Data de Devolução</label>
+        <input type="date" id="dataFim">
+        <small class="aviso-limite">Escolha uma data de até 15 dias após o início do empréstimo.</small>
+
+        <button onclick="registrarEmprestimo()">
+            Registrar Empréstimo
+        </button>
+
+        <hr>
+
+        <h2>Empréstimos Realizados</h2>
+
+        <div class="filtros">
+
+            <select id="filtroStatus">
+                <option value="">Todos os status</option>
+                <option value="emprestado">Emprestado</option>
+                <option value="atrasado">Atrasado</option>
+                <option value="devolvido">Devolvido</option>
+            </select>
+
+        </div>
+
+        <ul id="listaEmprestimos"></ul>
+
+    </main>
+
+    <script src="/projeto-biblioteca/js/menu.js"></script>
+    <script src="/projeto-biblioteca/js/Emprestimo.js"></script>
+
+
+</body>
+</html>
